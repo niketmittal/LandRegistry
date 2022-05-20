@@ -1,0 +1,547 @@
+{
+  "contractName": "LandInspector",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/LandInspector.sol\":\"LandInspector\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/LandInspector.sol\":{\"keccak256\":\"0x8fbbb6b35907e6544b9d5f1ad0098433841a49a9d44da953a802d383ad864a84\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://03ebf33fc960476e45ac9eea503b70c0dc639636809b10dba2b9a12b8e7150b3\",\"dweb:/ipfs/QmNYsRZczYLN2XMw71c5zwq49wLFpX3tAdFx3fuEHjt7kV\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220a065c26fb5aa54094866644fc2d4796f491221e1e3cf3264d8d1b50069238f2164736f6c634300080d0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220a065c26fb5aa54094866644fc2d4796f491221e1e3cf3264d8d1b50069238f2164736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "62:501:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "62:501:1:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.8.13;\r\n\r\ncontract LandInspector {\r\n    struct LandInspectorDetails {\r\n        address id;\r\n        uint256 jobId;\r\n        string name;\r\n        string designation;\r\n        int256 age;\r\n    }\r\n\r\n    function addLandInspector(\r\n        address _id,\r\n        uint256 _jobId,\r\n        string memory _name,\r\n        string memory _designation,\r\n        int256 _age\r\n    ) internal pure returns (LandInspectorDetails memory) {\r\n        return LandInspectorDetails(_id, _jobId, _name, _designation, _age);\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\pearl\\MyResumeProjects\\LandRegistry\\contracts\\LandInspector.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/LandInspector.sol",
+    "exportedSymbols": {
+      "LandInspector": [
+        87
+      ]
+    },
+    "id": 88,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 50,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:25:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LandInspector",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 87,
+        "linearizedBaseContracts": [
+          87
+        ],
+        "name": "LandInspector",
+        "nameLocation": "71:13:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "LandInspector.LandInspectorDetails",
+            "id": 61,
+            "members": [
+              {
+                "constant": false,
+                "id": 52,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "139:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 61,
+                "src": "131:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 51,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "131:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 54,
+                "mutability": "mutable",
+                "name": "jobId",
+                "nameLocation": "160:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 61,
+                "src": "152:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 53,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "152:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 56,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "183:4:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 61,
+                "src": "176:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 55,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "176:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 58,
+                "mutability": "mutable",
+                "name": "designation",
+                "nameLocation": "205:11:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 61,
+                "src": "198:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 57,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "198:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 60,
+                "mutability": "mutable",
+                "name": "age",
+                "nameLocation": "234:3:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 61,
+                "src": "227:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 59,
+                  "name": "int256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "227:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "LandInspectorDetails",
+            "nameLocation": "99:20:1",
+            "nodeType": "StructDefinition",
+            "scope": 87,
+            "src": "92:153:1",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 85,
+              "nodeType": "Block",
+              "src": "474:86:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 78,
+                        "name": "_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "513:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 79,
+                        "name": "_jobId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 65,
+                        "src": "518:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 80,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 67,
+                        "src": "526:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "id": 81,
+                        "name": "_designation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 69,
+                        "src": "533:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "id": 82,
+                        "name": "_age",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 71,
+                        "src": "547:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      ],
+                      "id": 77,
+                      "name": "LandInspectorDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 61,
+                      "src": "492:20:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_LandInspectorDetails_$61_storage_ptr_$",
+                        "typeString": "type(struct LandInspector.LandInspectorDetails storage pointer)"
+                      }
+                    },
+                    "id": 83,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "492:60:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LandInspectorDetails_$61_memory_ptr",
+                      "typeString": "struct LandInspector.LandInspectorDetails memory"
+                    }
+                  },
+                  "functionReturnParameters": 76,
+                  "id": 84,
+                  "nodeType": "Return",
+                  "src": "485:67:1"
+                }
+              ]
+            },
+            "id": 86,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addLandInspector",
+            "nameLocation": "262:16:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 63,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "297:3:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 86,
+                  "src": "289:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 62,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 65,
+                  "mutability": "mutable",
+                  "name": "_jobId",
+                  "nameLocation": "319:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 86,
+                  "src": "311:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 64,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "311:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 67,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "350:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 86,
+                  "src": "336:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 69,
+                  "mutability": "mutable",
+                  "name": "_designation",
+                  "nameLocation": "380:12:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 86,
+                  "src": "366:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "366:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 71,
+                  "mutability": "mutable",
+                  "name": "_age",
+                  "nameLocation": "410:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 86,
+                  "src": "403:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 70,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "403:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "278:143:1"
+            },
+            "returnParameters": {
+              "id": 76,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 75,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 86,
+                  "src": "445:27:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LandInspectorDetails_$61_memory_ptr",
+                    "typeString": "struct LandInspector.LandInspectorDetails"
+                  },
+                  "typeName": {
+                    "id": 74,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 73,
+                      "name": "LandInspectorDetails",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 61,
+                      "src": "445:20:1"
+                    },
+                    "referencedDeclaration": 61,
+                    "src": "445:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LandInspectorDetails_$61_storage_ptr",
+                      "typeString": "struct LandInspector.LandInspectorDetails"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "444:29:1"
+            },
+            "scope": 87,
+            "src": "253:307:1",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 88,
+        "src": "62:501:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:532:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-20T00:42:25.911Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

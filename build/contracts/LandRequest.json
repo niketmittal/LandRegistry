@@ -1,0 +1,619 @@
+{
+  "contractName": "LandRequest",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/LandRequest.sol\":\"LandRequest\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/LandRequest.sol\":{\"keccak256\":\"0x2f6439ede98e03f0664d334deab0c30659576254951270c8f75de5739a7b068b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e808f2edb2da637796d7bb3a9e902a4d4478dad5edc892fa042bea318c65c082\",\"dweb:/ipfs/QmeU19VU3KfFojetf8UDJf2N1rxJgmNPb91uUECVEdt76f\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220a3723ce369772dd7356a267f10f1d494c6b93c2c2f6e5eb8bd844206d9d3b7fd64736f6c634300080d0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220a3723ce369772dd7356a267f10f1d494c6b93c2c2f6e5eb8bd844206d9d3b7fd64736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "62:707:3:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "62:707:3:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.8.13;\r\n\r\ncontract LandRequest {\r\n    struct LandRequestDetails {\r\n        address sellerId;\r\n        address buyerId;\r\n        bytes32 LocalHash;\r\n        uint256 landId;\r\n        uint256 _bid;\r\n        bool AcceptOffer;\r\n    }\r\n\r\n    function addLandRequest(\r\n        address _sellerId,\r\n        address _buyerId,\r\n        bytes32 _LocalHash,\r\n        uint256 _landId,\r\n        uint256 _bid,\r\n        bool _AcceptOffer\r\n    ) internal pure returns (LandRequestDetails memory) {\r\n        return\r\n            LandRequestDetails(\r\n                _sellerId,\r\n                _buyerId,\r\n                _LocalHash,\r\n                _landId,\r\n                _bid,\r\n                _AcceptOffer\r\n            );\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\pearl\\MyResumeProjects\\LandRegistry\\contracts\\LandRequest.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/LandRequest.sol",
+    "exportedSymbols": {
+      "LandRequest": [
+        1407
+      ]
+    },
+    "id": 1408,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1365,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:25:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LandRequest",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1407,
+        "linearizedBaseContracts": [
+          1407
+        ],
+        "name": "LandRequest",
+        "nameLocation": "71:11:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "LandRequest.LandRequestDetails",
+            "id": 1378,
+            "members": [
+              {
+                "constant": false,
+                "id": 1367,
+                "mutability": "mutable",
+                "name": "sellerId",
+                "nameLocation": "135:8:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1378,
+                "src": "127:16:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1366,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "127:7:3",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1369,
+                "mutability": "mutable",
+                "name": "buyerId",
+                "nameLocation": "162:7:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1378,
+                "src": "154:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1368,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "154:7:3",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1371,
+                "mutability": "mutable",
+                "name": "LocalHash",
+                "nameLocation": "188:9:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1378,
+                "src": "180:17:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 1370,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "180:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1373,
+                "mutability": "mutable",
+                "name": "landId",
+                "nameLocation": "216:6:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1378,
+                "src": "208:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1372,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "208:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1375,
+                "mutability": "mutable",
+                "name": "_bid",
+                "nameLocation": "241:4:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1378,
+                "src": "233:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1374,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "233:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1377,
+                "mutability": "mutable",
+                "name": "AcceptOffer",
+                "nameLocation": "261:11:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1378,
+                "src": "256:16:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1376,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "256:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "LandRequestDetails",
+            "nameLocation": "97:18:3",
+            "nodeType": "StructDefinition",
+            "scope": 1407,
+            "src": "90:190:3",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1405,
+              "nodeType": "Block",
+              "src": "530:236:3",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 1397,
+                        "name": "_sellerId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1380,
+                        "src": "598:9:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 1398,
+                        "name": "_buyerId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1382,
+                        "src": "626:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 1399,
+                        "name": "_LocalHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1384,
+                        "src": "653:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 1400,
+                        "name": "_landId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1386,
+                        "src": "682:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 1401,
+                        "name": "_bid",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1388,
+                        "src": "708:4:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 1402,
+                        "name": "_AcceptOffer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1390,
+                        "src": "731:12:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1396,
+                      "name": "LandRequestDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1378,
+                      "src": "561:18:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_LandRequestDetails_$1378_storage_ptr_$",
+                        "typeString": "type(struct LandRequest.LandRequestDetails storage pointer)"
+                      }
+                    },
+                    "id": 1403,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "561:197:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LandRequestDetails_$1378_memory_ptr",
+                      "typeString": "struct LandRequest.LandRequestDetails memory"
+                    }
+                  },
+                  "functionReturnParameters": 1395,
+                  "id": 1404,
+                  "nodeType": "Return",
+                  "src": "541:217:3"
+                }
+              ]
+            },
+            "id": 1406,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addLandRequest",
+            "nameLocation": "297:14:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1380,
+                  "mutability": "mutable",
+                  "name": "_sellerId",
+                  "nameLocation": "330:9:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1406,
+                  "src": "322:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1379,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "322:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1382,
+                  "mutability": "mutable",
+                  "name": "_buyerId",
+                  "nameLocation": "358:8:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1406,
+                  "src": "350:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1381,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "350:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1384,
+                  "mutability": "mutable",
+                  "name": "_LocalHash",
+                  "nameLocation": "385:10:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1406,
+                  "src": "377:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1383,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "377:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1386,
+                  "mutability": "mutable",
+                  "name": "_landId",
+                  "nameLocation": "414:7:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1406,
+                  "src": "406:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1385,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "406:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1388,
+                  "mutability": "mutable",
+                  "name": "_bid",
+                  "nameLocation": "440:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1406,
+                  "src": "432:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1387,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "432:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1390,
+                  "mutability": "mutable",
+                  "name": "_AcceptOffer",
+                  "nameLocation": "460:12:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1406,
+                  "src": "455:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1389,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "455:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "311:168:3"
+            },
+            "returnParameters": {
+              "id": 1395,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1394,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1406,
+                  "src": "503:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LandRequestDetails_$1378_memory_ptr",
+                    "typeString": "struct LandRequest.LandRequestDetails"
+                  },
+                  "typeName": {
+                    "id": 1393,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1392,
+                      "name": "LandRequestDetails",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1378,
+                      "src": "503:18:3"
+                    },
+                    "referencedDeclaration": 1378,
+                    "src": "503:18:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LandRequestDetails_$1378_storage_ptr",
+                      "typeString": "struct LandRequest.LandRequestDetails"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "502:27:3"
+            },
+            "scope": 1407,
+            "src": "288:478:3",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1408,
+        "src": "62:707:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:738:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-20T00:42:25.974Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
