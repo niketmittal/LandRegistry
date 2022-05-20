@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import getWeb3 from './getWeb3';
+import SimpleStorageContract from '../../build/contracts/SimpleStorage.json';
 import './App.css';
 
 class App extends Component {
